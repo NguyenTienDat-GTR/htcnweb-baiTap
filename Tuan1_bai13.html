@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuan1_bai13</title>
+    <style>
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        
+        label {
+            width: 100px;
+            text-align: left;
+        }
+        
+        input {
+            width: 200px;
+            padding: 5px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        input[type="submit"] {
+            width: 100px;
+            margin-left: 105px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <label for="name">Name:</label><br>
+        <input type="text" name="name" id="name"> <br><br>
+        <label for="phone">Telephone Number:</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{4}[0-9]{3}[0-9]{3}"> <br><br>
+        <label for="fcolor">Favorite Color:</label><br>
+        <input type="color" id="fcolor" name="fcolor"><br><br>
+        <label for="birthday">Date of Birth:</label><br>
+        <input type="date" id="birthday" name="birthday"><br><br>
+        <input type="submit" id="submit" value="Submit">
+    </form>
+</body>
+
+</html>
