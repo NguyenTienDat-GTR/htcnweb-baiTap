@@ -6,27 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tuan1>bai14</title>
-    <style>
-        #lblemail {
-            margin-right: 87px;
-        }
-        
-        #lblemail:active {
-            cursor: pointer;
-        }
-        
-        #lblmess {
-            margin-right: 102px;
-        }
-        
-        #letter1 {
-            margin-left: 90px;
-        }
-        
-        #button {
-            margin-top: 10px;
-        }
-    </style>
 </head>
 
 <body>
@@ -36,24 +15,55 @@
     <p>
         Use the fllowing form to send a message to Example Cafe.
     </p>
-    <form action="">
-        <label for="email" id="lblemail">Your email</label>
-        <input type="email" id="email" name="mailTxt"><br><br>
-        <label for="Message" id="lblmess">Message</label>
-        <textarea name="text" id="Message" cols="50" rows="10" tabindex="2"></textarea><br>
-        <label for="hear">How did you hear of us?</label>
-        <select name="hear" id="hear">
-            <option value="Google">Google</option>
-            <option value="Facebook">Facebook</option>
-            <option value="Twitter">Twitter</option>
-            <option value="Instagram">Instagram</option>
-        </select><br>
-        <label for="letter">Newsletter</label>
-        <input type="checkbox" id="letter1" name="letter1" value="yes">
-        <label for="letter1">Ensure this box is checked if you would like to receive email updates</label><br>
-        <input type="button" id="button" value="Send message">
-
-    </form>
+    <table>
+        <tr>
+            <td>
+                <label for="emailTo">To</label>
+            </td>
+            <td>
+                <input type="text" name="txtTo" readonly="readonly" id="emailTo" size="20" value="Example Cafe">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="emailFrom">Your email</label>
+            </td>
+            <td>
+                <input type="text" name="txtFrom" id="emailFrom" size="20" tabindex="1" maxlength="250">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="emailBody">Message</label>
+            </td>
+            <td>
+                <textarea name="txtBody" id="emailBody" cols="50" rows="10" tabindex="2"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="listBox">How did you hear of us</label>
+            </td>
+            <td>
+                <select name="listBox" id="listBox">
+                    <option value="Google">Google</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="Instagram">Instagram</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="checkBox">Newsletter</label>
+            </td>
+            <td>
+                <input type="checkbox" id="letter1" name="letter1" value="yes">
+                <label for="letter1">Ensure this box is checked if you would like to receive email updates</label>
+            </td>
+        </tr>
+    </table>
+    <input type="button" id="button" value="Send message">
 </body>
 
 </html>

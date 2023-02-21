@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuan1_bai15b</title>
+    <style>
+        fieldset {
+            width: 500px;
+            margin: 0 auto;
+        }
+        
+        legend {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        table {
+            width: 100%;
+        }
+        
+        td {
+            padding: 5px;
+        }
+        
+        input[type="text"],
+        textarea {
+            width: 100%;
+        }
+        
+        input[type="submit"] {
+            width: 30%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin-top: 5px;
+            margin-left: 0px;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Contact Information</legend>
+        <table>
+            <tr>
+                <td>
+                    <label for="Fname">First name:</label>
+                </td>
+                <td>
+                    <input type="text" id="Fname" name="Fname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Lname">Last name:</label>
+                </td>
+                <td>
+                    <input type="text" id="Lname" name="Lname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email:</label>
+                </td>
+                <td>
+                    <input type="email" id="email" name="email">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>Competition Question</legend>
+        <p>How tall is the Eiffel Tower in Paris, France?</p>
+        <input type="radio" id="584ft" name="tall" value="584ft">
+        <label for="584ft">584 ft</label><br>
+        <input type="radio" id="784ft" name="tall" value="784ft">
+        <label for="784ft">784 ft</label><br>
+        <input type="radio" id="984ft" name="tall" value="984ft">
+        <label for="984ft">984 ft</label><br>
+        <input type="radio" id="1184ft" name="tall" value="1184ft">
+        <label for="1184ft">1184 ft</label><br>
+    </fieldset>
+    <fieldset>
+        <legend>Tiebreaker Question</legend>
+        <table>
+            <tr>
+                <p>In 25 words or less, say why you would like to win $10,000:</p>
+            </tr>
+            <tr>
+                <textarea name="txt" id="txt" cols="50" rows="10"></textarea>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>Enter Comnpetition</legend>
+        <input type="submit" value="Enter Competiton">
+    </fieldset>
+</body>
+
+</html>

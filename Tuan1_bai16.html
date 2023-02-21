@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuan1_bai16</title>
+</head>
+
+<body>
+    <H1>
+        <b>Travel reservation form</b> <br>
+    </H1>
+    <p>
+        <b>* denotes mandotory</b>
+    </p>
+    <label for="txtFname" id="lblFname" name="lblfname">Full name*:</label><br>
+    <input type="text" id="txtFname" name="txtFname" placeholder="FirstName LastName"><br>
+    <label for="txtEmail" id="lblEmail" name="lblEmail">Email address*:</label><br>
+    <input type="text" id="txtEmail" name="txtEmail" placeholder="Email address"><br>
+    <label for="select" id="selBox" name="selBox">Select Tour Package*</label><br>
+    <select name="selBox" id="select">
+        <option value="Goa">Goa</option>
+    </select><br>
+    <label for="txtDate" id="lblDate" name="lblDate">Arrival date*:</label><br>
+    <input type="date" id="txtDate" name="txtDate"><br>
+
+    <lable for="txtNumber" id="lblNum" name="lblNum">Number of person*:</lable><br>
+    <input type="number" id="txtNumber" name="txtNum" placeholder="UNKNOW_TYPE"><br>
+
+    <label for="Question" id="ques" name="ques">What would you want to avail?*</label><br>
+    <label for="txtBoarding" id="lblBoarding" name="lblBoarding">Boarding</label>
+    <input type="checkbox" id="txtBoarding" name="txtBoarding"><br>
+    <label for="txtFooding" id="lblFooding" name="lblFooding">Fooding</label>
+    <input type="checkbox" id="txtFooding" name="txtFooding"><br>
+    <label for="txtSightSeeing" id="lblSightSeeing" name="lblSightSeeing">Sight seeing</label>
+    <input type="checkbox" id="txtSightSeeing" name="txtSightSeeing"><br>
+
+    <label for="txtDis" id="lblDis" name="lblDis">Discount Coupon Code:</label><br>
+    <input type="text" id="txtDis" name="txtDis" placeholder="UNKNOW_TYPE"><br>
+
+    <label for="lblTems" id="lblTems" name="lbltems">Tems and conditions*:</label><br>
+    <input type="radio" id="agree" name="radTems" value="agree">
+    <label for="agree" id="lblAgree">I agree</label>
+    <input type="radio" id="disagree" name="radTems" value="disagree">
+    <label for="disagree" id="lblDisagree">I disagree</label>
+    <br>
+    <input type="button" id="btn" name="btn" value="Complete reservation">
+</body>
+
+</html>

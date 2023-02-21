@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuan1_bai15</title>
+    <style>
+        fieldset {
+            width: 500px;
+            margin: 0 auto;
+        }
+        
+        legend {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        table {
+            width: 100%;
+        }
+        
+        td {
+            padding: 5px;
+        }
+        
+        input[type="text"],
+        textarea {
+            width: 100%;
+        }
+        
+        input[type="submit"] {
+            width: 30%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin-top: 5px;
+            margin-left: 470px;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Your message:</legend>
+        <table>
+            <tr>
+                <td>
+                    <label for="emailTo">To</label>
+                </td>
+                <td>
+                    <input type="text" name="txtTo" readonly="readonly" id="emailTo" size="20" value="Example Cafe">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="emailFrom">Your email</label>
+                </td>
+                <td>
+                    <input type="text" name="txtFrom" id="emailFrom" size="20" tabindex="1" maxlength="250">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="emailBody">Message</label>
+                </td>
+                <td>
+                    <textarea name="txtBody" id="emailBody" cols="50" rows="10" tabindex="2"></textarea>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>How you found us:</legend>
+        <table>
+            <tr>
+                <td>
+                    <label for="listBox">How did you hear of us</label>
+                </td>
+                <td>
+                    <select name="listBox" id="listBox">
+                        <option value="Google">Google</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Twitter">Twitter</option>
+                        <option value="Instagram">Instagram</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="checkBox">Newsletter</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="letter1" name="letter1" value="yes">
+                    <label for="letter1">Ensure this box is checked if you would like to receive email updates</label>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <input type="submit" id="button" value="Send message">
+</body>
+
+</html>
