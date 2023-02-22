@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuan2_bai17a</title>
+    <style>
+        h2,
+        #btnSubmit {
+            margin-left: 550px;
+        }
+        
+        pre {
+            margin-left: 200px;
+        }
+        
+        ol {
+            margin-left: 250px;
+        }
+        
+        body {
+            background-color: rgb(244, 179, 81);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>
+        <b>Survey Form</b>
+    </h2>
+    <pre>
+        If you are interested in purchasing one more of our products, before ordering please complete
+        some or all of the following survey for our marketing department. Answering any questions is
+        optional, and all information wil be kept strictly condidential. Thank you ver much for your time!
+    </pre>
+    <ol start="1">
+        <li>What is your name?</li>
+        <input type="text" id="txtName"><br>
+
+        <li>What is your date of birth?</li>
+        <label for="boxMonth" name="lblMonth">Month:</label>
+        <input type="month" id="boxMonth" name="boxMonth">
+        <label for="boxDate" name="lblDate">Date:</label>
+        <input type="date" id="boxDate" name="boxDate">
+        <label for="boxYear" name="lblYear">Year:</label>
+        <input type="year" id="boxYear" name="boxYear">
+
+        <li>What is your mailing address? (if you would like to have a hard copy of our catalog sent to <br> you)?
+        </li>
+        <textarea name="txt3" id="txt3" cols="50" rows="5">Number/P.O. Box/Router:
+Street/Avenue/Road:
+City:
+State/Zip:
+        </textarea>
+
+        <li>What is your email address?</li>
+        <input type="email" id="txtEmail" name="txtEmail"><br>
+
+        <li>Have you viewed our online product catalog?</li>
+        <input type="radio" id="radYes" name="radYes" value="Yes">
+        <label for="radYes" id="lblRadYes" name="lblRadYes">Yes</label>
+        <input type="radio" id="radNo" name="radNo" value="No">
+        <label for="radNo" id="lblRadNo" name="lblRadNo">No</label>
+
+        <li>If so, what product(s), besides the one our are ordering, might you be interested in purchasing <br> in the future</li>
+        <input type="checkbox" id="VCR" value="VCR">
+        <label for="VCR" id="lblVCR">VCR</label><br>
+        <input type="checkbox" id="BigScreenTV" value="BigScreenTV">
+        <label for="BigScreenTV" id="lblBigScreenTV">Big Screen TV</label><br>
+        <input type="checkbox" id="AuE" value="AuE">
+        <label for="AuE" id="AuE">Audio Equipment</label><br>
+        <input type="checkbox" id="ViE" value="ViE">
+        <label for="ViE" id="ViE">Video Equipment</label><br>
+        <input type="checkbox" id="CaE" value="CaE">
+        <label for="CaE" id="CaE">Camera Equipment</label><br>
+        <input type="checkbox" id="other" value="orther">
+        <label for="orther" id="orther">Other</label>
+        <input type="text" id="txtO" name="txtO" placeholder="Please List"><br>
+
+        <li>Do you have any questions, comments or suggestion before proceeding to the Order Form?</li>
+        <textarea name="txt7" id="txt7" cols="50" rows="5">Your Input:</textarea><br>
+    </ol>
+    <input type="submit" id="btnSubmit" value="Send Form">
+    <input type="reset" id="res" value="Clear Form">
+</body>
+
+</html>
