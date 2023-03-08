@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuan3_bai19</title>
+    <style>
+        nav {
+            display: block;
+            position: absolute;
+            width: 100%;
+        }
+        
+        #menu {
+            display: flex;
+            justify-content: left;
+            height: 50px;
+        }
+        
+        div {
+            background-color: darkslategrey;
+            height: 50px;
+            width: 200px;
+        }
+        
+        li {
+            display: inline;
+            margin-right: 20px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        
+        a:link {
+            text-decoration: none;
+            color: white;
+        }
+        
+        li ul {
+            display: none;
+        }
+        
+        li:hover ul {
+            display: block;
+            position: absolute;
+            background-color: #8fe78f;
+            margin: 0;
+            left: 43%;
+        }
+        
+        li:hover ul li a:link {
+            display: block;
+            color: white;
+            margin-left: -30px;
+        }
+        
+        a:hover {
+            color: yellow;
+        }
+        
+        a {
+            color: white;
+        }
+        
+        ul {
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul id="menu" type="none">
+            <li>
+                <div><a href="#">Home</a></div>
+            </li>
+            <li>
+                <div><a href="#">Introdution</a></div>
+            </li>
+            <li>
+                <div><a href="#">Portfolio</a></div>
+                <ul type="none">
+                    <li><a href="#">Photography</a></li>
+                    <li><a href="#">Web & User Interface Design</a></li>
+                    <li><a href="#">Illustration</a></li>
+                </ul>
+            </li>
+            <li>
+                <div><a href="#">News</a></div>
+            </li>
+            <li>
+                <div><a href="#">Contact</a></div>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>
