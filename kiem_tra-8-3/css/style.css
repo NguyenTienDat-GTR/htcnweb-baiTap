@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+.main {
+    width: 100%;
+    margin: auto;
+}
+
+
+/* lay out */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 16px;
+    width: 100%;
+}
+
+header .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+}
+
+header .menu li {
+    list-style: none;
+}
+
+header .menu li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+header .menu li a:hover {
+    color: #0bed8f;
+}
+
+header .avatar {
+    display: flex;
+    align-items: center;
+}
+
+header .avatar input {
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+}
+
+
+/* Product */
+
+.product-first,
+.product-second {
+    display: flex;
+    margin: 52px 0;
+    width: 85%;
+    border: 1px solid #c6c4c4;
+    border-radius: 3px;
+    margin-left: 130px;
+}
+
+.product img {
+    width: 556px;
+}
+
+.product-1,
+.product-2,
+.product-3 {
+    padding: 40px 60px;
+}
+
+.product-title {
+    font-size: 48px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    color: #333;
+}
+
+.product-text {
+    color: #333;
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.product-note {
+    color: #777;
+    font-style: italic;
+    padding-bottom: 28px;
+}
+
+.product-btn {
+    padding: 16px 69px;
+    background-color: #459d7a;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 3px;
+}
+
+.product-second {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.product-third {
+    background-color: #eae7e7;
+    border-radius: 3px;
+    border: none;
+    display: flex;
+    margin: 52px 0;
+    width: 85%;
+    margin-left: 130px;
+}
+
+.product-3 .product-title {
+    color: #333;
+    font-size: 55px;
+}
+
+
+/* footer */
+
+footer {
+    width: 1500px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: #fff;
+    margin-left: -100px;
+}
+
+.link {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 100px;
+}
+
+.link .about {
+    display: flex;
+    flex-direction: column;
+}
+
+.link .contact li,
+.link .help li,
+.link .about li {
+    list-style-type: none;
+    padding: 6px 0;
+}
+
+.link .about li a:hover {
+    color: #ffe70a;
+}
+
+.link .help li a:hover {
+    color: #ffe70a;
+}
+
+.link .contact div a:hover {
+    color: #ffe70a;
+}
+
+.link .contact .contact-email a,
+.link .contact .contact-phone a,
+.link .help li a,
+.link .about li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact-title,
+.link .help p,
+.link .about p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#select {
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* Subscribe */
+
+footer .subcribe {
+    padding-top: 100px;
+}
+
+.subcribe-title {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.subcribe-sub-title {
+    font-size: 16px;
+    color: #d5d8dd;
+    padding-bottom: 16px;
+}
+
+.subcribe .input {
+    position: relative;
+}
+
+.subcribe .input .input-email {
+    height: 52px;
+    width: 446px;
+    padding: 16px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #333;
+    border: 1px solid #ccc;
+    color: #fff;
+}
+
+.subcribe .subcribe-btn {
+    height: 53px;
+    background-color: #459d7a;
+    width: 124px;
+    border: none;
+    color: #fff;
+    border-radius: 0 8px 8px 0;
+    position: absolute;
+    top: -1px;
+    right: 0;
+    text-align: center;
+    line-height: 52px;
+}
+
+.sub-list {
+    display: flex;
+    padding-top: 34px;
+}
+
+.sub-list li {
+    list-style-type: none;
+}
+
+.sub-list li a {
+    text-decoration: none;
+    padding-right: 6px;
+}
+
+.copyright {
+    display: flex;
+    padding-bottom: 120px;
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 15px;
+}
+
+.copyright p {
+    padding-right: 26px;
+}
+
+.copyright li a {
+    text-decoration: none;
+    color: #fff;
+    padding-right: 26px;
+}
