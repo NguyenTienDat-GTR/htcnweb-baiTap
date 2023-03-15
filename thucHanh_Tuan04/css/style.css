@@ -389,3 +389,90 @@ div .name-image {
 .name-person-4 p {
     margin-left: 5px;
 }
+
+
+/*chat*/
+
+.right-bottom {
+    border-left: 1px solid rgb(193, 185, 185);
+    margin-left: 20px;
+}
+
+.right-bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.chat {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat-message {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 300px;
+}
+
+.chat-message #name-chat {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10px;
+    width: 200px;
+}
+
+.chat-message #time-chat {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: rgb(167, 165, 165);
+    margin-left: 10px;
+    width: 100px;
+}
+
+.message {
+    display: flex;
+    width: 300px;
+    height: 40px;
+    background-color: rgb(224, 224, 224);
+    margin-left: 70px;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+
+.chat-3 .message {
+    margin-left: 70px;
+    width: 70px;
+    align-items: center;
+}
+
+.chat-4 .message {
+    margin-left: 70px;
+    width: 70px;
+    color: rgb(165, 163, 160);
+    align-items: center;
+}
+
+.chat-5 {
+    display: flex;
+    width: 400px;
+    align-items: center;
+}
+
+.chat-5 input {
+    width: 350px;
+    height: 30px;
+    background-color: rgba(243, 241, 241, 0.938);
+    border: none;
+}
