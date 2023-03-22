@@ -1,0 +1,278 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    background-color: white;
+}
+
+.header-left {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 700px;
+}
+
+.header-left .header-menu {
+    height: 50px;
+}
+
+.header-left li {
+    display: inline;
+}
+
+.header-left ul {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    color: black;
+}
+
+.header-left li a:link {
+    text-decoration: none;
+    font-size: 20px;
+    align-items: center;
+}
+
+.header-left li div {
+    height: 32px;
+}
+
+.header-left li div:hover {
+    border-bottom: 3px solid rgb(90, 196, 238);
+}
+
+.header-left li a:hover {
+    color: rgb(90, 196, 238)
+}
+
+.header-right {
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    margin-right: 20px;
+}
+
+.main-form {
+    margin-left: 100px;
+    width: 85%;
+}
+
+.title-small {
+    display: flex;
+    width: 300px;
+}
+
+.title-small p {
+    margin-right: 5px;
+    color: rgb(192, 192, 192);
+}
+
+.title-small #p3 {
+    color: rgb(26, 26, 26);
+}
+
+.title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.evaluate {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.rating {
+    display: flex;
+    width: 200px;
+    align-items: center;
+}
+
+.rating #p1 {
+    font-weight: bolder;
+}
+
+.rating #p2 {
+    color: rgb(197, 197, 197);
+}
+
+.share-save {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    align-items: center;
+}
+
+.save {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.picture {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    gap: 10px;
+}
+
+.picture-1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.main-product {
+    width: 70%;
+    height: 300px;
+}
+
+.product-title {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.main-product .paragraph {
+    width: 100%;
+    height: 100px;
+}
+
+.icon {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 5px;
+}
+
+.icon-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-left div {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.icon-left img {
+    margin-right: 10px;
+}
+
+.icon-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-right div {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.icon-right img {
+    margin-right: 10px;
+}
+
+.box {
+    border: 1px solid rgb(207, 207, 207);
+    height: 300px;
+}
+
+.buy-box {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+}
+
+.money {
+    color: rgb(33, 142, 245);
+    font-size: 30px;
+    font-weight: bold;
+    width: 270px;
+    display: flex;
+    justify-content: right;
+}
+
+.color-box #color {
+    width: 270px;
+    height: 30px;
+    background-color: rgb(194, 194, 194);
+    margin-top: 10px;
+}
+
+.size-box #size {
+    width: 270px;
+    height: 30px;
+    background-color: rgb(194, 194, 194);
+    margin-top: 10px;
+}
+
+.quantity-box #quantity {
+    width: 270px;
+    height: 30px;
+    background-color: rgb(194, 194, 194);
+    margin-top: 10px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 270px;
+    font-size: 15px;
+}
+
+.total #p1 {
+    color: rgb(204, 204, 204);
+}
+
+.total #p2 {
+    font-weight: bold;
+}
+
+.buy button {
+    background-color: rgb(33, 142, 245);
+    color: white;
+    height: 40px;
+    width: 270px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.buy button div {
+    height: 30px;
+    text-align: center;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.add button {
+    width: 270px;
+    margin-top: 10px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid rgb(33, 142, 245);
+    border-radius: 5px;
+}
+
+.add button div {
+    display: flex;
+    align-items: center;
+    color: rgb(33, 142, 245);
+    font-size: 20px;
+    margin-top: -15px;
+    margin-left: 25%;
+}
