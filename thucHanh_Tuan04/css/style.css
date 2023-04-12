@@ -1,9 +1,11 @@
-#wrapper {
+.wrapper {
     display: flex;
     justify-content: center;
+    width: 100px;
+    align-items: center;
 }
 
-#container {
+.container {
     display: flex;
     justify-content: space-between;
     width: 100%;
