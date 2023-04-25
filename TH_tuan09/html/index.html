@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../bootstrap-4.6.2-dist/css/bootstrap.css">
+    <script src="../bootstrap-4.6.2-dist/jquery-3.6.4.js"></script>
+    <script src="../bootstrap-4.6.2-dist/js/bootstrap.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            //kiem tra ma
+            function kiemTraMa() {
+                let ma = $("#id").val();
+                let pattern = /^(BN)-\d{6}$/;
+                if (ma == null) {
+                    $("#errid").html("Mã không được để trống");
+                    $("#errid").addClass("error");
+                    return false;
+                } else if (pattern.test(ma)) {
+                    $("#errid").html("*");
+                    return true;
+                } else {
+                    $("#errid").html("Mã sai định dạng");
+                    $("#errid").addClass("error");
+                    return false;
+                }
+            }
+            $("#id").blur(function(e) {
+                kiemTraMa();
+            });
+
+            function kiemTraMatKhau() {
+                let matkhau = $("#pass").val();
+                let pattern = /.{6,}/;
+                if (matkhau == null) {
+                    $("#errpass").html("Mật khẩu không được để trống");
+                    $("#errpass").addClass("error");
+                    return false;
+                } else if (pattern.test(matkhau)) {
+                    $("#errpass").html("*");
+                    return true;
+                } else {
+                    $("#errpass").html("Mật khẩu phải từ 6 kí tự trở lên");
+                    $("#errpass").addClass("error");
+                    return false;
+                }
+            }
+            $("#pass").blur(function(e) {
+                kiemTraMatKhau();
+            });
+
+            function kiemTraNgayKham() {
+                let ngayKham = $("#date").val();
+                ngayKham = new Date(ngayKham);
+                let ngayHT = new Date();
+                if (ngayKham == null) {
+                    $("#errdate").html("Ngày khám không được để trống");
+                    $("#errdate").addClass("error");
+                    return false;
+                } else if (ngayKham < ngayHT) {
+                    $("#errdate").html("Ngày không hợp lệ");
+                    $("#errdate").addClass("error");
+                    return false;
+                } else {
+                    $("#errdate").html("*");
+                    return true;
+                }
+            }
+            $("#date").blur(function(e) {
+                kiemTraNgayKham();
+            });
+            $("#chuyenkhoa").change(function(e) {
+                let ck = $("#chuyenkhoa option:selected").val();
+            });
+            $("#btnDatLich").click(function(e) {
+                let ma = $("#id").val();
+                let matkhau = $("#pass").val();
+                let ngayKham = $("#date").val();
+                let ck = $("#chuyenkhoa option:selected").val();
+                let loaiDV = [];
+                $.each($("input[type'checkbox']: checked "), function() {
+                    loaiDV.push($(this).val());
+                })
+                if (kiemTraMa) {
+                    let tablenew = "<tr><td>" + ma + "</td><td>" + matkhau + "</td><td>" + ngayKham + "</td><td>" + loaiDV + "</td><td>" + ck + "</td></tr>";
+                    $("table").append(tablenew);
+                }
+            })
+
+            function submit(event) {
+                event.preventDefault();
+                var ma = document.getElementById("id").value;
+                var matkhau = document.getElementById("pass").value;
+                var ngayKham = document.getElementById("date").value;
+                var ck = document.getElementById("chuyenkhoa").value;
+
+                var table = document.getElementById("table");
+                var row = table.insertRow(0);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(4);
+
+                cell1.innerHTML = ma;
+                cell2.innerHTML = matkhau;
+                cell3.innerHTML = ngayKham;
+                cell4.innerHTML = ck;
+            }
+        })
+    </script>
+
+    <style>
+        .error {
+            color: red;
+            font-style: italic;
+        }
+        
+        .errorborder {
+            border: 1px solid red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="../data/img_carousel.jpg" alt="" style="width:100% ; height:200px">
+            </div>
+            <nav class="navbar navbar-expand-sm bg-light">
+                <ul class="navbar-nav">
+                    <li>
+                        <a href="#" class="nav-link">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="" class="nav-link" data-toggle='modal' data-target='#mymodal'>Đặt lịch</a>
+                    </li>
+                </ul>
+            </nav>
+            <table class="table table-bordered m-0">
+                <tr>
+                    <th>STT</th>
+                    <th>Mã bệnh nhân</th>
+                    <th>Mật khẩu</th>
+                    <th>Ngày khám</th>
+                    <th>Phụ thu dịch vụ</th>
+                    <th>Chuyên khoa</th>
+                </tr>
+            </table>
+            <div class="footer bg-success" style="height: 100px">
+                19473791-Nguyễn Tiến Đạt
+            </div>
+        </div>
+        <div class="modal fade" id='mymodal'>
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="text-center mt-4">Đặt lịch khám online</h1>
+                        <button data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form" id="form" action="#">
+                            <div class="form-group">
+                                <label for="id">Mã bệnh nhân</label>
+                                <input type="text" id="id" class="form-control input--id">
+                                <span id="errid">*</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass">Mật khẩu</label>
+                                <input type="password" id="pass" class="form-control input--pass">
+                                <span id="errpass">*</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Ngày khám</label>
+                                <input type="date" id="date" class="form-control input--date">
+                                <span id="errdate" class="erro-ngayKham">*</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="loaidichvu">Loại dịch vụ</label>
+                                <div class="form-check-inline">
+                                    <input type="checkbox" class="form-check-input" id="khambenhyeucau" name="loai" value="Khám bệnh theo yêu cầu">
+                                    <label for="khambenhyeucau" class="form-check-label">Khám bệnh theo yêu cầu</label>
+
+                                    <input type="checkbox" class="form-check-input" id="dieutringoaitru" name="loai" value="Điều trị ngoại trú">
+                                    <label for="dieutringoaitru" class="form-check-label">Điều trị ngoại trú</label>
+
+                                    <input type="checkbox" class="form-check-input" id="bacsitheoyeucau" name="loai" value="Bác sĩ theo yêu cầu">
+                                    <label for="bacsitheoyeucau" class="form-check-label">Bác sĩ theo yêu cầu</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="chuyenkhoa">Chuyên khoa</label>
+                                <select id="chuyenkhoa" class="form-control select--chuyenkhoa">
+                                    <option value="Ngoại tổng quát">Ngoại tổng quát</option>
+                                    <option value="Nhi">Nhi</option>
+                                    <option value="Sản">Nội tổng quát</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary btn-submit" id="btnDatLich" onclick="submit()">Đặt Lịch</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </div>
+    </div>
+</body>iv>
+</body>
+</div>
+</div>
+</div>
+</body>
+</div>
+</div>
+</body>iv>
+</body>

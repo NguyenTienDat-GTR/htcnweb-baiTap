@@ -1,0 +1,158 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.header-left {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 700px;
+}
+
+.header-left .header-menu {
+    height: 50px;
+}
+
+.header-left li {
+    display: inline;
+}
+
+.header-left ul {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    color: black;
+}
+
+.header-left li a:link {
+    text-decoration: none;
+    font-size: 20px;
+    align-items: center;
+}
+
+.header-left li div {
+    height: 32px;
+}
+
+.header-left li div:hover {
+    border-bottom: 3px solid rgb(90, 196, 238);
+}
+
+.header-left li a:hover {
+    color: rgb(90, 196, 238)
+}
+
+.header-right {
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    margin-right: 20px;
+}
+
+.main-form {
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 85%;
+}
+
+.title-small {
+    display: flex;
+    width: 300px;
+}
+
+.title-small p {
+    margin-right: 5px;
+    color: rgb(192, 192, 192);
+}
+
+.title-small #p3 {
+    color: rgb(26, 26, 26);
+}
+
+.title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.evaluate {
+    display: flex;
+    justify-content: space-between;
+    width: ;
+}
+
+.rating {
+    display: flex;
+    width: 200px;
+    align-items: center;
+}
+
+.rating #p1 {
+    font-weight: bolder;
+}
+
+.rating #p2 {
+    color: rgb(197, 197, 197);
+}
+
+.share-save {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    align-items: center;
+}
+
+.save {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.picture {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    gap: 10px;
+}
+
+.picture-1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.main-product {
+    width: 70%;
+    height: 300px;
+}
+
+.product-title {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.main-product .paragraph {
+    width: 100%;
+    height: 150px;
+}
+
+.icon {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 40%;
+    gap: 50px;
+    margin-top: 20px;
+    grid-row: 3;
+    grid-column: 2;
+}

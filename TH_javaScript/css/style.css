@@ -1,0 +1,62 @@
+body {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.time {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    margin-left: 30%;
+    background-color: yellow;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.colon {
+    font-size: 50px;
+    font-weight: 700;
+    color: #000;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+#hours {
+    font-size: 50px;
+    font-weight: 700;
+    color: #000;
+}
+
+#minutes {
+    font-size: 50px;
+    font-weight: 700;
+    color: #000;
+}
+
+#seconds {
+    font-size: 50px;
+    font-weight: 700;
+    color: #000;
+}
+
+button {
+    font-size: 50px;
+    font-weight: 700;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: #e20404 3px solid;
+}
+
+button:hover {
+    background-color: #5d8bee;
+    color: #fff;
+}

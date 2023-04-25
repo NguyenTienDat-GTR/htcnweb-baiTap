@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Star_Stop Watch</title>
+</head>
+
+<body>
+    <h1>Star_Stop Watch</h1>
+    <div class="time">
+        <span id="hours">00</span>
+        <span class="colon">:</span>
+        <span id="minutes">00</span>
+        <span class="colon">:</span>
+        <span id="seconds">00</span>
+    </div>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="reset()">Reset</button>
+    <script>
+        var time = 0;
+        var seconds = 0;
+        var hours = 0;
+        var minutes = 0;
+        var interval;
+        var status = "stopped";
+
+        function getId(id) {
+            return document.getElementById(id);
+        }
+
+        function start() {
+            if (status === "stopped") {
+                interval = setInterval(function() {
+                    seconds++;
+                    getId("seconds").innerHTML = seconds;
+                    if (seconds === 60) {
+                        seconds = 0;
+                        getMinutes(seconds);
+                        if (minutes === 60) {
+                            minutes = 0;
+                            getHours(minutes);
+                        }
+                    }
+                }, 1000);
+                status = "started";
+            }
+        }
+
+        function getMinutes(seconds) {
+            minutes++;
+            getId("seconds").innerHTML = seconds;
+            getId("minutes").innerHTML = minutes;
+            return minutes;
+        }
+
+        function getHours(minutes) {
+            hours++;
+            getId("minutes").innerHTML = minutes;
+            getId("hours").innerHTML = hours;
+        }
+
+
+        function stop() {
+            if (status === "started") {
+                clearInterval(interval);
+                status = "stopped";
+            }
+        }
+
+        function reset() {
+            if (status === "stopped" || status === "started") {
+                seconds = 0;
+                minutes = 0;
+                hours = 0;
+                getId("seconds").innerHTML = seconds;
+                getId("minutes").innerHTML = minutes;
+                getId("hours").innerHTML = hours;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
